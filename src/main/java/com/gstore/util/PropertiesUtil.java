@@ -11,13 +11,14 @@ import java.util.Properties;
 /**
  * Created by Ocean
  */
+//工具类静态方法
 public class PropertiesUtil {
 
     private static Logger logger = LoggerFactory.getLogger(PropertiesUtil.class);
 
     private static Properties props;
 
-    static {//在类加载时优先执行且只执行一次
+    static {//在类加载时优先执行且只执行一次 一般都是做初始化变量
         String fileName = "mmall.properties";
         props = new Properties();
         try {
