@@ -1,5 +1,7 @@
 package com.gstore.util;
 
+import org.springframework.web.bind.annotation.RequestParam;
+
 import java.math.BigDecimal;
 
 /**
@@ -12,7 +14,7 @@ public class BigDecimalUtil {
     }
 
 //+
-    public static BigDecimal add(double v1,double v2){
+    public static BigDecimal add(@RequestParam(value = "v1",defaultValue = "0")double v1,@RequestParam(value = "v2",defaultValue = "0") double v2){
         BigDecimal b1 = new BigDecimal(Double.toString(v1));
         BigDecimal b2 = new BigDecimal(Double.toString(v2));
         return b1.add(b2);
