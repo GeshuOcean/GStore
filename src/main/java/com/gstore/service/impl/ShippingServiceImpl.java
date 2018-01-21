@@ -6,6 +6,7 @@ import com.google.common.collect.Maps;
 import com.gstore.common.ServerResponse;
 import com.gstore.dao.ShippingMapper;
 import com.gstore.pojo.Shipping;
+import com.gstore.service.IShippingService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +17,7 @@ import java.util.Map;
  * Created by Ocean .
  */
 @Service("iShippingServiceImple")
-public class ShippingServiceImpl {
+public class ShippingServiceImpl implements IShippingService{
     @Autowired
     private ShippingMapper shippingMapper;
     public ServerResponse add(Integer userId, Shipping shipping){
